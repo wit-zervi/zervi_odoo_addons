@@ -23,9 +23,9 @@ class ProductLabelLayout(models.TransientModel):
         #     'custom_barcodes': defaultdict(<class 'list'>, {2: [('250605', 2), ('250604', 2)]})
         # }
 
-        _logger.info("Hello: this is wit tring to Debug")
-        _logger.info(xml_id)
-        _logger.info(data)
+        # _logger.info("Hello: this is wit trying to Debug")
+        # _logger.info(xml_id)
+        # _logger.info(data)
 
         # Logic that copy from addons\stock\wizard\product_label_layout.py but apply to move_quantity == 'custom'
         #       to print a specific amount of product label along with barcode of lot id
@@ -50,8 +50,8 @@ class ProductLabelLayout(models.TransientModel):
                 data['quantity_by_product'] = {p: int(q) for p, q in quantities.items() if q}
                 data['custom_barcodes'] = custom_barcodes
 
-                _logger.info("This is customization in custom_addons/zervi_stock/wizard/product_label_layout.py")
-                _logger.info(data)
+                # _logger.info("This is customization in custom_addons/zervi_stock/wizard/product_label_layout.py")
+                # _logger.info(data)
         # fmt: on
 
         return xml_id, data
